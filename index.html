@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+
+    <script>
+        function scrollToOrderForm() {
+            const form = document.getElementById('order-form1');
+            form.scrollIntoView({ behavior: 'smooth' });
+            
+        }
+        </script>
+
+
+
+
+
+
+    <title>REAGL</title>
+    
+</head>
+<body>
+    <div class="grunge-overlay"></div>
+    
+    <header>
+        <h1>PIXELGRUNGE SHOP</h1>
+    </header>
+    
+    <div class="container">
+        <div class="products">
+            <!-- Карточка товара 1 -->
+            <div class="product-card ">
+                <div class="product-image" style="background-image: url(photo_2025-04-04_20-38-49.jpg); background-position: center center;  background-size: cover;"></div>
+                <h3 class="product-title">PIXEL T-SHIRT</h3>
+                <p class="product-description">Классическая футболка с пиксельным принтом. 100% хлопок.</p>
+                <p class="product-price">999 ₽</p>
+                <button class="buy-button" onclick="scrollToOrderForm()">КУПИТЬ</button>
+            </div>
+            
+            <!-- Карточка товара 2 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url(photo_2025-04-04_20-38-49\ \(2\).jpg); background-position: center center;  background-size: cover;"></div>
+                <h3 class="product-title">GRUNGE HOODIE</h3>
+                <p class="product-description">Толстовка с эффектом потертости и пиксельным лого.</p>
+                <p class="product-price">2499 ₽</p>
+                <button class="buy-button" onclick="scrollToOrderForm()">КУПИТЬ</button>
+            </div>
+            
+            <!-- Карточка товара 3 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url(photo_2025-04-04_20-38-49\ \(3\).jpg); background-position: center center;  background-size: cover;"></div>
+                <h3 class="product-title">RETRO CAP</h3>
+                <p class="product-description">Бейсболка в стиле 90-х с пиксельным узором.</p>
+                <p class="product-price">799 ₽</p>
+                <button class="buy-button" onclick="scrollToOrderForm()">КУПИТЬ</button>
+            </div>
+            
+            <!-- Карточка товара 4 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url(photo_2025-04-04_21-16-25.jpg); background-position: center center;  background-size: cover;"></div>
+                <h3 class="product-title">PIXEL SOCKS</h3>
+                <p class="product-description">Носки с пиксельным рисунком. Набор из 3 пар.</p>
+                <p class="product-description">Размеры S M L XL XXL</p>
+                <p class="product-price">599 ₽</p>
+                <button class="buy-button" onclick="scrollToOrderForm()">КУПИТЬ</button>
+            </div>
+             <!-- Карточка товара 1 -->
+             <div class="product-card ">
+                <div class="product-image" style="background-image: url(photo_2025-04-04_20-38-49.jpg); background-position: center center;  background-size: cover;"></div>
+                <h3 class="product-title">PIXEL T-SHIRT</h3>
+                <p class="product-description">Классическая футболка с пиксельным принтом. 100% хлопок.</p>
+                <p class="product-price">999 ₽</p>
+                <button class="buy-button" onclick="scrollToOrderForm()">КУПИТЬ</button>
+            </div>
+            
+            <!-- Карточка товара 2 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url(photo_2025-04-04_20-38-49\ \(2\).jpg); background-position: center center;  background-size: cover;"></div>
+                <h3 class="product-title">GRUNGE HOODIE</h3>
+                <p class="product-description">Толстовка с эффектом потертости и пиксельным лого.</p>
+                <p class="product-price">2499 ₽</p>
+                <button class="buy-button" onclick="scrollToOrderForm()">КУПИТЬ</button>
+            </div>
+            
+            <!-- Карточка товара 3 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url(photo_2025-04-04_20-38-49\ \(3\).jpg); background-position: center center;  background-size: cover;"></div>
+                <h3 class="product-title">RETRO CAP</h3>
+                <p class="product-description">Бейсболка в стиле 90-х с пиксельным узором.</p>
+                <p class="product-price">799 ₽</p>
+                <button class="buy-button" onclick="scrollToOrderForm()">КУПИТЬ</button>
+            </div>
+            
+            <!-- Карточка товара 4 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url(photo_2025-04-04_21-16-25.jpg); background-position: center center;  background-size: cover;"></div>
+                <h3 class="product-title">PIXEL SOCKS</h3>
+                <p class="product-description">Носки с пиксельным рисунком. Набор из 3 пар.</p>
+                <p class="product-description">Размеры S M L XL XXL</p>
+                <p class="product-price">599 ₽</p>
+                <button class="buy-button" onclick="scrollToOrderForm()">КУПИТЬ</button>
+            </div>
+        </div>
+        
+        <div class="pixel-divider"></div>
+        
+        <!-- Форма заказа -->
+
+            <!-- Hidden Required Fields -->
+    <input type="hidden" name="project_name" value="reagle">
+    <input type="hidden" name="admin_email" value="wisaut8@gmail.com">
+    <input type="hidden" name="form_subject" value="Form Subject 1">
+    <!-- END Hidden Required Fields -->
+
+
+        <div class="order-form" id="order-form1">
+            <h2>ФОРМА ЗАКАЗА</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">ИМЯ:</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Телеграмм:</label>
+                    <input type="text" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">ТЕЛЕФОН:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">АДРЕС:</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product">ВЫБЕРИТЕ ТОВАР:</label>
+                    <select id="product" required>
+                        <option value="">-- Выберите товар --</option>
+                        <option value="pixel-tshirt">PIXEL T-SHIRT</option>
+                        <option value="grunge-hoodie">GRUNGE HOODIE</option>
+                        <option value="retro-cap">RETRO CAP</option>
+                        <option value="pixel-socks">PIXEL SOCKS</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product-size">ВЫБЕРИТЕ РАЗМЕР:</label>
+                    <select id="product-size" required>
+                        <option value="">-- Выберите РАЗМЕР --</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">КОЛИЧЕСТВО:</label>
+                    <input type="number" id="quantity" min="1" value="1" required>
+                </div>
+                
+                <button type="submit" class="submit-button">ОФОРМИТЬ ЗАКАЗ</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        © 2023 PIXELGRUNGE SHOP | ВСЕ ПРАВА ЗАЩИЩЕНЫ
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./mytscript/scr.js"></script>
+</body>
+</html>
