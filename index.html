@@ -109,16 +109,12 @@
         
         <!-- Форма заказа -->
 
-            <!-- Hidden Required Fields -->
-    <input type="hidden" name="project_name" value="reagle">
-    <input type="hidden" name="admin_email" value="wisaut8@gmail.com">
-    <input type="hidden" name="form_subject" value="Form Subject 1">
-    <!-- END Hidden Required Fields -->
+     
 
 
         <div class="order-form" id="order-form1">
             <h2>ФОРМА ЗАКАЗА</h2>
-            <form>
+            <form action="telegram.php" method="post">
                 <div class="form-group">
                     <label for="name">ИМЯ:</label>
                     <input type="text" id="name" required>
@@ -168,7 +164,7 @@
                     <input type="number" id="quantity" min="1" value="1" required>
                 </div>
                 
-                <button type="submit" class="submit-button">ОФОРМИТЬ ЗАКАЗ</button>
+                <button type="submit" class="submit-button" class="send-button">ОФОРМИТЬ ЗАКАЗ</button>
             </form>
         </div>
     </div>
