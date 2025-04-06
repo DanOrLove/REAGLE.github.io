@@ -1,49 +1,25 @@
 <?php
 
-$method = $_SERVER['REQUEST_METHOD'];
-$c = true;
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
+$token = "8052032735:AAG87Af39FQ8_aE0WLUXvPvliLas7683Scg";
+$chat_id = "4600503321";
+$arr = array(
+  'Имя пользователя: ' => $name,
+  'Телефон: ' => $phone,
+  'Email' => $email
+);
 
-if ( $method === 'POST' ) {
-
-  $project_name = trim($_POST["project_name"]);
-  $admin_email  = trim($_POST["admin_email"]);
-  $form_subject = trim($_POST["form_subject"]);
-
-  foreach ( $_POST as $key => $value ) {
-    if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-      $message .= "
-      " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-        <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-        <td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-      </tr>
-      ";
-    }
-  }
-} else if ( $method === 'GET' ) {
-
-  $project_name = trim($_GET["project_name"]);
-  $admin_email  = trim($_GET["admin_email"]);
-  $form_subject = trim($_GET["form_subject"]);
-
-  foreach ( $_GET as $key => $value ) {
-    if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-      $message .= "
-      " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-        <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-        <td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-      </tr>
-      ";
-    }
-  }
+foreach($arr as $key => $value) {
+  $txt .= "<b>".$key."</b> ".$value."%0A";
 };
 
-$message = "<table style='width: 100%;'>$message</table>";
+$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
-function adopt($text) { return '=?UTF-8?B?'.Base64_encode($text).'?='; };
-
-$headers = "MIME-Version: 1.0" . "\r\n" .
-"Content-Type: text/html; charset=utf-8" . "\r\n" .
-"From: " . adopt($project_name) . " <" . $admin_email . ">" . "\r\n" .
-"Reply-To: " . $admin_email . "" . "\r\n";
-
-mail($admin_email, adopt($form_subject), $message, $headers );
+if ($sendToTelegram) {
+  header('Location: success.html');
+} else {
+  echo "Error";
+}
+?>
